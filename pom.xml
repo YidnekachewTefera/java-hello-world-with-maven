@@ -13,6 +13,18 @@
            <maven.compiler.source>1.8</maven.compiler.source>
            <maven.compiler.target>1.8</maven.compiler.target>
      </properties>
+    <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <url>http://172.20.67.45:8081/repository/maven-snapshots/</url>
+        </repository>
+        <snapshotRepository>
+            <id>data-verification</id>
+            <name>data-verification</name>
+            <url>https://172.20.67.45:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
 
       <dependencies>
            <dependency>
