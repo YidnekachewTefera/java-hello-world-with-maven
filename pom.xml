@@ -19,8 +19,8 @@
             <url>http://172.20.67.45:8081/repository/maven-snapshots/</url>
         </repository>
         <snapshotRepository>
-            <id>data-verification</id>
-            <name>data-verification</name>
+            <id>maven-snapshots</id>
+            <name>maven-snapshots</name>
             <url>https://172.20.67.45:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
