@@ -5,7 +5,7 @@
     <groupId>org.springframework</groupId>
     <artifactId>jb-hello-world-maven</artifactId>
     <packaging>jar</packaging>
-    <version>0.2.0</version>
+    <version>0.2.0-SNAPSHOT</version>
 
     <!-- tag::joda[] -->
      <properties>
@@ -14,14 +14,10 @@
            <maven.compiler.target>1.8</maven.compiler.target>
      </properties>
     <distributionManagement>
-        <repository>
-            <id>nexus</id>
-            <url>http://172.20.67.45:8081/repository/maven-snapshots/</url>
-        </repository>
         <snapshotRepository>
-            <id>maven-snapshots</id>
-            <name>maven-snapshots</name>
-            <url>https://172.20.67.45:8081/repository/maven-snapshots/</url>
+            <id>sonatype-nexus</id>
+            <name>Sonatype Nexus Snapshots</name>
+            <url>http://localhost:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 
