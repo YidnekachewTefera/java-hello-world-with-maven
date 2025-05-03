@@ -1,18 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             http://maven.apache.org/maven-v4_0_0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.springframework</groupId>
     <artifactId>jb-hello-world-maven</artifactId>
     <packaging>jar</packaging>
     <version>0.2.0-SNAPSHOT</version>
 
-    <!-- tag::joda[] -->
-     <properties>
-           <java.version>1.8</java.version>
-           <maven.compiler.source>1.8</maven.compiler.source>
-           <maven.compiler.target>1.8</maven.compiler.target>
-     </properties>
+    <properties>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <!-- SCM configuration for Maven Release Plugin -->
+    <scm>
+        <connection>scm:git:https://github.com/YidnekachewTefera/java-hello-world-with-maven.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/YidnekachewTefera/java-hello-world-with-maven.git</developerConnection>
+        <url>https://github.com/YidnekachewTefera/java-hello-world-with-maven</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <!-- Repositories -->
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>sonatype-nexus</id>
+            <url>http://localhost:8081/repository/maven-snapshots/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
     <distributionManagement>
         <snapshotRepository>
             <id>sonatype-nexus</id>
@@ -21,16 +56,22 @@
         </snapshotRepository>
     </distributionManagement>
 
+    <dependencies>
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.2</version>
+        </dependency>
+        <!-- Example snapshot dependency -->
+        <!--
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>example-lib</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        -->
+    </dependencies>
 
-      <dependencies>
-           <dependency>
-               <groupId>joda-time</groupId>
-               <artifactId>joda-time</artifactId>
-               <version>2.2</version>
-           </dependency>
-       </dependencies>
-       <!-- end::joda[] -->
-       
     <build>
         <plugins>
             <plugin>
@@ -56,4 +97,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
