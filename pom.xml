@@ -46,6 +46,11 @@
     </repositories>
 
     <distributionManagement>
+        <repository>
+            <id>sonatype-nexus</id>
+            <name>Sonatype Nexus Releases</name>
+            <url>http://localhost:8081/repository/maven-releases/</url>
+        </repository>
         <snapshotRepository>
             <id>sonatype-nexus</id>
             <name>Sonatype Nexus Snapshots</name>
