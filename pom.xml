@@ -5,7 +5,7 @@
     <groupId>org.springframework</groupId>
     <artifactId>jb-hello-world-maven</artifactId>
     <packaging>jar</packaging>
-    <version>0.2.1-SNAPSHOT</version>
+    <version>0.2.1</version>
 
     <properties>
         <java.version>1.8</java.version>
@@ -35,7 +35,7 @@
         </repository>
         <repository>
             <id>sonatype-nexus</id>
-            <url>http://localhost:8081/repository/maven-snapshots/</url>
+            <url>http://172.20.67.218:8081/repository/maven-snapshots/</url>
             <releases>
                 <enabled>false</enabled>
             </releases>
@@ -49,12 +49,12 @@
         <repository>
             <id>sonatype-nexus</id>
             <name>Sonatype Nexus Releases</name>
-            <url>http://localhost:8081/repository/maven-releases/</url>
+            <url>http://172.20.67.218:8081/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
             <id>sonatype-nexus</id>
             <name>Sonatype Nexus Snapshots</name>
-            <url>http://localhost:8081/repository/maven-snapshots/</url>
+            <url>http://172.20.67.218:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 
